@@ -19,8 +19,8 @@ client = MongoClient(host, int(port))
 src_dbname = 'twitter_db'
 trgt_dbname = 'twitter_db'
 
-src_coll = '2016-08-24-2016-08-25-b'
-trgt_coll = '2016-08-24-2016-08-25-a'
+src_coll = '2016-08-24-2016-08-25'
+trgt_coll = '2016-08-23-2016-08-25'
 
 
 src_db = client[src_dbname]
@@ -48,6 +48,8 @@ for s in cursor:
         #res.remove()
 
 print('Source: ', src.count(), ' target: ', trgt.count())        
+print('You can safely remove ', src_dbname,'.', src_coll)
+
 
 #src.delete_many({})
 
